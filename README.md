@@ -1,6 +1,5 @@
 # CyberSec
-**Automated ELK Stack Deployment**
-
+<p><align="center"><b>Automated ELK Stack Deployment</b></p>
 The files in this repository were used to configure the network depicted below.
 
 
