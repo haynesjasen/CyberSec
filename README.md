@@ -38,37 +38,19 @@ The configuration details of each machine may be found below.
 Note: Use the Markdown Table Generator to add/remove values from the table.
 
 
-
-Name
-Function
-IP Address
-Operating System
-
-
-
-
-Jump Box
-Gateway
-10.0.0.1
-Linux
-
-
-TODO
+| Name             | Function          | IP Address        | Operating System  |
+| -----------------|:-----------------:|:-----------------:|:-----------------:|
+|                  |                   |                   |                   |
+|                  |                   |                   |                   |
+|                  |                   |                   |                   |
 
 
 
-
-
-TODO
-
-
-
-
-
-TODO
-
-
-
+| Jump Box         | Gateway           | 10.0.0.1          | Linux             |
+| -----------------|:-----------------:|:-----------------:|:-----------------:|
+|                  |                   |                   |                   |
+|                  |                   |                   |                   |
+|                  |                   |                   |                   |
 
 
 
