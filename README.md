@@ -6,9 +6,9 @@ Note: The following image link needs to be updated. Replace diagram_filename.png
 
 [Elk-Stack-Project-Diagram](Diagrams/Elk-Stack-Project-Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 
-TODO: Enter the playbook file.
+[FileBeat-Playbook](Ansible/filebeat-playbook.yml)
 
 This document contains the following details:
 
