@@ -17,13 +17,15 @@ This document contains the following details:
 - How to Use the Ansible Build
 
 
-Description of the Topology
+# **Description of the Topology**
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?
+Load Balancing plays an important security role as computing moves evermore to the cloud. The off-loading function of a load balancer defends an organization against **distributed denial-of-service (DDoS) attacks**. It does this by shifting attack traffic from the corporate server to a public cloud provider.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+A **jump box** is a secure computer that all admins first connect to before launching any administrative task or use as an origination point to connect to other servers or untrusted environments.
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **data** and **system logs**.
 
 TODO: What does Filebeat watch for?
 TODO: What does Metricbeat record?
