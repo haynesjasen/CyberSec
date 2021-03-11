@@ -1,9 +1,7 @@
 # **Automated ELK Stack Deployment**
-
 The files in this repository were used to configure the network depicted below.
+![alt text](https://github.com/haynesjasen/CyberSec/blob/main/Diagrams/Elk-Stack-Project-Diagram.png)
 
-
-![alt text](https://github.com/haynesjasen/CyberSec/blob/main/Diagrams/Elk-Stack-Project-Diagram.png) 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -36,27 +34,24 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 
 The configuration details of each machine may be found below.
-Note: Use the Markdown Table Generator to add/remove values from the table.
-
-
-| Name             | Function          | IP Address        | Operating System  |
-| -----------------|:-----------------:|:-----------------:|:-----------------:|
-| Jump Box         | Gateway           | 10.0.0.1          | Linux             |
-|                  |                   |                   |                   |
-|                  |                   |                   |                   |
-
-
-
+| Name             | Function          | IP Address        | Operating System                |
+| -----------------|:-----------------:|:-----------------:|:-------------------------------:|
+| Jumpbox          | Management        | 10.0.0.4/16       | Ubuntu Server (18.04-LTS) Linux |
+| Web1             | WebServer         | 10.0.0.5/16       | Ubuntu Server (18.04-LTS) Linux |
+| Web2             | WebServer         | 10.0.0.6/16       | Ubuntu Server (18.04-LTS) Linux |
+| Web3             | WebServer         | 10.0.0.7/16       | Ubuntu Server (18.04-LTS) Linux |
+| Elk Server       | SysLog            | 10.1.0.4/16       | Ubuntu Server (18.04-LTS) Linux |
 
 Access Policies
 The machines on the internal network are not exposed to the public Internet.
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the *Jumpbox* machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-TODO: Add whitelisted IP addresses
+On premesis public IP X.X.X.X
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by Jumpbox Docker Container.
 
 TODO: Which machine did you allow to access your ELK VM? What was its IP address?
+JumpBox 10.0.0.4/16
 
 A summary of the access policies in place can be found in the table below.
 
@@ -68,25 +63,7 @@ A summary of the access policies in place can be found in the table below.
 |                  |                     |                      |
 
 
-
-Jump Box
-Yes/No
-10.0.0.1 10.0.0.2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Elk Configuration
+# *Elk Configuration*
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
 TODO: What is the main advantage of automating configuration with Ansible?
@@ -115,13 +92,13 @@ These Beats allow us to collect the following information from each machine:
 TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.
 
 
-Using the Playbook
+# *Using the Playbook*
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 SSH into the control node and follow the steps below:
 
-Copy the _____ file to _____.
-Update the _____ file to include...
-Run the playbook, and navigate to ____ to check that the installation worked as expected.
+Copy the ___ file to ___.
+Update the ___ file to include...
+Run the playbook, and navigate to __ to check that the installation worked as expected.
 
 TODO: Answer the following questions to fill in the blanks:
 
