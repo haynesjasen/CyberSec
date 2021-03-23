@@ -18,8 +18,8 @@ certain pieces of it; such as Filebeat/Metricbeat or any other Beats desired.
 - **ELK Configuration**
     - **Beats in Use**
     - **Machines Being Monitored**
-- **ELK Deployment, Play by Play**
-- **Beats Deployment, Play by Play**
+- **ELK Deployment**
+- **Beats Deployment**
 
 # Description of the Topology
 ```diff
@@ -166,7 +166,7 @@ create dashboards to monitor Azure Metrics such as the following:
 
 
 
-# Using the Playbook! You could say the below is a... Play by Play?... 😂
+# Using the Playbook!
 
 ```diff
 In order to use the playbook, you will need to have an Ansible control node already configured, in this deployment the 
@@ -242,13 +242,10 @@ on port 5601.  Use the following URL in your browser to verify both Public and P
 ![alt text](https://github.com/haynesjasen/CyberSec/blob/main/ScreenShots/Kibana.png)
 
 
-# **Let's get the heart of our deployment BEATING!**
+# **Beat Automation Deployment**
 
-**HOW DO WE DO IT???!!!**
 ```diff
-The below will be the instructions on how to automate the deployment process of our BEATS.  We will be deploying
-Filebeat & Metricbeat.  The process at this point will be much shorter now that we have the elk-server deployed.
-The deployment is very similar to the above instructions on deploying the elk-server.
+The below will be the instructions on how to automate the deployment process of our (Beats) Filebeat & Metricbeat.
 ```
 ```diff
 1. Copy the filebeat-configuration.yml & the filebeat-playbook.yml to the /etc/ansible/files directory.
