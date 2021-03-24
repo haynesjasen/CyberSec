@@ -23,14 +23,13 @@ certain pieces of it; such as Filebeat/Metricbeat or any other Beats desired.
 
 # Description of the Topology
 ```diff
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web 
-Application.  Load balancing ensures that the application will be highly available, in addition to restricting access 
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the DVWA.
+Load balancing ensures that the application will be highly available, in addition to restricting access 
 to the network.
 
 Load Balancing plays an important security role as computing moves evermore to the cloud. The off-loading function 
 of a load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It does this by 
-shifting attack traffic from the corporate server to a public cloud provider.  This is important for accomplishing 
-availability in the CIA triad.
+shifting attack traffic from the corporate server to a public cloud provider.
 ```
 ```diff
 A Jumpbox is a secure computer that all admins first connect to before launching any administrative task or use 
@@ -42,14 +41,12 @@ It's recommended to use beats in tandem with Logstash.
 ```
 ```diff
 Filebeat is a light weight log shipper installed as an agent on your servers for forwarding and centralizing log 
-data.  Filebeat monitors the log files that you specify ships them to either Logstash or Elasticsearch to be
-processed, indexed and made viewable by Kibana.
+data.
 ```
 - https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html
 ```diff
 Metricbeat is another lightweight log shipper that collects metrics / metadata ships them to Logstash to be 
-processed and sent to Elasticsearch to be indexed and made viewable by Kibana.  For more information on what
-metrics / metadata can be recorded please see the below link.
+processed and sent to Elasticsearch to be indexed and made viewable by Kibana.
 ```
 - https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-overview.html
 
@@ -124,13 +121,7 @@ and Elasticsearch.  With Filebeat you as the administrator set which files are t
 example: In a Linux environment if you have auditd installed you can setup a cronjob with crontab 
 to create logs anytime account changes are made and have them stored in the /var/log/ directory.  
 Anytime a user account change is made you can have that change write a new file or append an existing 
-log file.  When filebeat detects a file size change in the log file, the filebeat input will then start
-a harvester, the harvester will read the log file line by line until it reaches the end and then it will initiate a 
-close_inactive and the session will end and the harvester will close.  At this point if another account
-change is made and we are appending, the logfile size will change and then the filebeat input will repeat
-this process forwarding the new event data to the logstash or elasticsearch to be viewed by Kibana.
-This is how you would monitor account changes with a Linux system.  Please see the below links for more 
-information on filebeat.
+log file.
 ```
 
 - https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html 
@@ -138,13 +129,7 @@ information on filebeat.
 ```diff
 After Metricbeat has been deployed you should expect to see Metric Metadata being forwarded to Elasticsearch.
 The Metricbeat Azure Module will consist of one or more Metricsets This module specifies details about the 
-service including how to connect, how often to collect metrics, and which metrics to collect.  Each Metricset
-is the part of the module that fetches and structures the data.  Rather than collecting each metric as a separate
-event, Metricsets retrieve a list of multiple related metrics in a single request to a remote system.  
-For example: The Azure Module provides an info Metricset that collects information and statistics from the Azure 
-Module by running the INFO command and parsing the returned result.  Please refer to the below link for more 
-information on the Azure module for Module-specific configuration notes and Metricsets. This is how we would 
-create dashboards to monitor Azure Metrics such as the following:
+service including how to connect, how often to collect metrics, and which metrics to collect.
 ```
 - https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-module-azure.html
 - https://www.elastic.co/guide/en/beats/metricbeat/current/defining-processors.html
